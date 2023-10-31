@@ -1,8 +1,8 @@
 #!/bin/bash
 ########################################################################
 # PrepareDebianChrootJail.sh
-# Author : Charles Pandian, ProjectGuideline.com
-# Script Awailable at: 
+# Author: Charles Pandian, ProjectGuideline.com
+# Script Available at: https://github.com/igs3000/ns-3-Turotials/blob/main/Scripts/PrepareDebianChrootJail.sh
 ########################################################################
 #~ 	Version	Codename Release Year	Status
 #
@@ -105,12 +105,12 @@ else
 fi
 
 
-echo "Downloadig the root file system of $DebianVersion under the folder $chrootFolder"
-echo "Please wait for few minutes with respect to the speed of your internet connection"
+echo "Downloading the root file system of $DebianVersion under the folder $chrootFolder"
+echo "Please wait for a few minutes with respect to the speed of your internet connection"
 
 ########################################################################
-#Step 3: Download the entire directory structure ofDebian Linux under the folder using debootstrap command
-# This will download few hundred mega bytes. So it will complete the step with respect to your internet speed
+#Step 3: Download the entire directory structure of Debian Linux under the folder using debootstrap command
+# This will download a few hundred megabytes. So it will complete the step with respect to your internet speed
 #sudo debootstrap --arch=$Arch $DebianVersion ~/$chrootFolder http://deb.debian.org/debian
 
 
@@ -141,5 +141,5 @@ EOF
 chmod +x  ~/chrootjail$chrootFolder.sh
 ########################################################################
 echo  "A new chroot Jail was setup in the folder $chrootFolder"
-echo   "Now you may find a shell script chrootjail$chrootFolder.sh that will automaticallyl setup the environment and bring a new chroot Jail of  Debian  $DebianVersion -$Arch "
+echo  "Now you may find a shell script chrootjail$chrootFolder.sh that will automatically setup the environment and bring a new chroot Jail of  Debian  $DebianVersion-$Arch "
 echo  "You can now execute the script chrootjail$chrootFolder.sh  from a file browser or a terminal"
