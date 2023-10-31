@@ -77,10 +77,12 @@ fi
 
 ########################################################################
 #Step 0: Update apt repositories
-#sudo apt update
+
+sudo apt update
 
 ########################################################################
 #Step 1: Install the dependencies
+
 sudo apt install binutils debootstrap
 
 # Step 2: Create a directory for holding the root file system (of the guest OS -Debian). 
@@ -110,8 +112,10 @@ echo "Please wait for a few minutes with respect to the speed of your internet c
 
 ########################################################################
 #Step 3: Download the entire directory structure of Debian Linux under the folder using debootstrap command
-# This will download a few hundred megabytes. So it will complete the step with respect to your internet speed
-#sudo debootstrap --arch=$Arch $DebianVersion ~/$chrootFolder http://deb.debian.org/debian
+#This will download a few hundred megabytes depending upon the distro of choice. 
+#So it will complete the download with respect to your internet speed
+
+sudo debootstrap --arch=$Arch $DebianVersion ~/$chrootFolder http://deb.debian.org/debian
 
 
 ########################################################################
@@ -140,6 +144,6 @@ EOF
 
 chmod +x  ~/chrootjail$chrootFolder.sh
 ########################################################################
-echo  "A new chroot Jail was setup in the folder $chrootFolder"
-echo  "Now you may find a shell script chrootjail$chrootFolder.sh that will automatically setup the environment and bring a new chroot Jail of  Debian  $DebianVersion-$Arch "
+echo  "A new chroot Jail was set in the folder $chrootFolder"
+echo  "Now you may find a shell script chrootjail$chrootFolder.sh that will automatically set the environment and bring a new chroot Jail of  Debian  $DebianVersion-$Arch "
 echo  "You can now execute the script chrootjail$chrootFolder.sh  from a file browser or a terminal"
