@@ -15,7 +15,7 @@
         </div>    
     </div>
     <div style="width: 30%; padding: 10px; box-sizing: border-box;">
-         <img src="./PythonQR.png" alt="Ref:GitHubPage"  />   
+         <img src="./PythonQR.png" alt="Ref:GitHubPage"  style="width: 150px; height: 150px;" />   
           <!--<img src="/home/jason/PythonQR.png" alt="Ref:GitHubPage" /> -->   
     </div>      
 </div>
